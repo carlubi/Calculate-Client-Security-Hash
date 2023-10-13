@@ -1,0 +1,154 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_NavigateTo_WorkItems" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="945.7142857142857,897.1428571428571" sap2010:WorkflowViewState.IdRef="System1_NavigateTo_WorkItems_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="System1_NavigateTo_WorkItems" sap:VirtualizedContainerService.HintSize="546.2857142857143,832" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WaitUiElementVanish WaitNotActive="{x:Null}" WaitNotVisible="{x:Null}" DisplayName="Wait Element Vanish 'BUTTON'" sap:VirtualizedContainerService.HintSize="484.57142857142856,106.85714285714286" sap2010:WorkflowViewState.IdRef="WaitUiElementVanish_1">
+      <ui:WaitUiElementVanish.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c6422ae-2963-4ac0-a06e-abc04352e5d9" InformativeScreenshot="6da020e3cbccc88382b3cb2b7145d6da" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;&lt;webctrl tag='BUTTON' type='submit' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:WaitUiElementVanish.Target>
+    </ui:WaitUiElementVanish>
+    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="484.57142857142856,93.14285714285714" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Use Browser Chrome: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="484.57142857142856,441.7142857142857" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b1cc3a93-976e-4d01-8e61-81fb25459b5b" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450.2857142857143,221.71428571428572" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="388.57142857142856,106.85714285714286" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="be90e200-ebc2-45b8-87a6-af03724ca97f" InformativeScreenshot="ed99e1a97f8bf0026b185f8443ed2850" Selector="&lt;webctrl aaname='*Work Items' parentid='dashmenu' tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1168" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAR2SURBVFhHvZdvbFNVFMCvblYqKhpNEHEJsqhDE74IMX7QoKjTBAzhg34RJJDIUIhI5v4wkHX/Otq10zJgm38gc2NjkiXioh8MbBZG/21v7VsrbusGi9nYKtsYU0yWbcdzXr2vj9rXsJfWD6ev975z7/29c8+fexkrE4ZQbqJM/c9Ca15l+AOylOL/0q5IW/kuIf9xblpDORc2JuUOQyewAhewA+7kSAHOS/MTRLkEMk4WmGJGbODLzNPB5hrx+pb8X0aycjUKH5vdNpK13x4WmiunfSTL6Bzbvu/8cDErQUsUSZaeCAMQ0Wdu2NxyZX3m3g0s2aI73I3reQA/XAFQ5IFXG4N7kr34V77xVakEUBgNgB1vNQ98lCiA0Zn5lWuqejrWNQVrlHPWCNefVgXITBAAADyaUu4F9qEd2E47HOgYPcshrK4xdYAN30UskHbUX6s3+QRm6BRebx6wqVlm9de/2VlRp+dBi09MKRF2kF77tVtb2Y42YJUisL0d6PHdwMdXuELqABvPRAD0Zu8tVohhmeuANSd7Q2oAy6v8wPIcwIpR19B1guulf3kZ2O4LkrQMTBkWDLDEKjpYMYbKfhe8WN93Tg1g5fHArBTbZV3w8OfiIaXewbbhzXnO0LPKvup4PqC0wBKL6FIAtMUBmCdIAlhs9hXG0hv7a+4u3l/rHb+zLdACoCvvlgFWHAuAHrflPlM3oD9VcoA6cSLBANWBOW4BvcICD1h9wD5F38C0rjN5TRygwZ94AHkLlAD41cAOYu7H4vaYrUe2TH2iAdKrAzEBnqDoIADM+0u/0ADwkPXOnBABYm6BJoC3FXlg0WGvW6paGGJr6/rOq0VBRm1gRvIBo1Tr5XjXBKDMhOhEfsxwwHIcsL4p+JMaQNqxiKkXW3xmrqcJ4OVTQbkYvf/j0Fn2ySVg2ZfghYb+ETWAVBN6O5ZylusEmxDaxfUeP6LBB16qjwCcCEzslFIpFRXcht6bM09GQ8wDrGb5TkrBUrhd/XNmGddZautZuBO+1hQBoIn0Fbh4Pn4d1e5DHii4cG2b2R3KaPx1clVe+3COVCtK8DCz+yI8X993QwmoZoG6eGH4ZlQ5bv19ehd771z4EEn+gGbWVaDJqZ2NSYbOkBRqH9hhcg7eUAKkURjS1mAeWGbzyzUibh6IBqAJ320d6mL70Bc+xrJKlqDKR4dWtAj16wwe2PLzsJzpOAQz4qlnz0XJidFKR3l/YyBOJowFQANbB6fXvtMy+MMjJi/cj7k9Fev7cqs4vfX7K98O/T2ri+Wgr5zqv5F+pGf2mZoArGsI5nCdk2KcYqQGoBYBWvqPC3EA8EiW9EPpN97xjHiH0o1avmqhY+7FbfzvsRy9edOZwdLTlydXVLpDz5mdt4sJ2xaUcseo9M4SQyd6THS7SvjjKZNzbFMqOSg6L7+YhK9meDlJwReL0NHuxieZKdFyD90HylAod4Tvh9LVLNyguxpdlyi8iC4ZwueOupz2S6YoE0KSGP998nYin7fPTWv2/gMtMHhuSoY6yAAAAABJRU5ErkJggg==" InformativeScreenshot="5666c1e1a43ce085dd8ce1baaa342bd0.jpg" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;" Title="ACME System 1 - Dashboard" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
