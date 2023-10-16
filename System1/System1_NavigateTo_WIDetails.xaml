@@ -1,11 +1,11 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="System1_NavigateTo_WIDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_System1_URL" Type="InArgument(x:String)" />
-    <x:Property Name="in_TransactionID" Type="InArgument(x:String)" />
+    <x:Property Name="in_WIID" Type="InArgument(x:String)" />
   </x:Members>
-  <this:System1_NavigateTo_WIDetails.in_TransactionID>
+  <this:System1_NavigateTo_WIDetails.in_WIID>
     <InArgument x:TypeArguments="x:String" />
-  </this:System1_NavigateTo_WIDetails.in_TransactionID>
+  </this:System1_NavigateTo_WIDetails.in_WIID>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -116,20 +116,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe ACME'" sap:VirtualizedContainerService.HintSize="484.57142857142856,530.2857142857143" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="74f221d0da013baae2237fce1220bede" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge Window" sap:VirtualizedContainerService.HintSize="484.57142857142856,530.2857142857143" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="3df3f2d7fd70eab4c2211cc5f53169d7" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450.2857142857143,383.42857142857144" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450.2857142857143,383.42857142857144" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="388.57142857142856,87.42857142857143" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[in_System1_URL + &quot;work-items/&quot; + in_TransactionID.ToString]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388.57142857142856,145.71428571428572" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_System1_URL + &quot;work-items/&quot; + in_TransactionID.ToString]" />
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Go to work item WIID" sap:VirtualizedContainerService.HintSize="388.57142857142856,87.42857142857143" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[in_System1_URL + &quot;work-items/&quot; + in_WIID.ToString]" />
+            <ui:LogMessage DisplayName="Log URL" sap:VirtualizedContainerService.HintSize="388.57142857142856,145.71428571428572" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[in_System1_URL + &quot;work-items/&quot; + in_WIID.ToString]" />
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>

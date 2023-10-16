@@ -239,7 +239,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="231.42857142857142,203.42857142857142" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="586.2857142857143,1505.142857142857" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="539.4285714285714,1010.2857142857143" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -283,10 +283,7 @@
                           <InArgument x:TypeArguments="x:String" x:Key="in_SHA1_URL">
                             <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SHA1_URL" />
                           </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_TransactionItemField2">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionField2" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_TransactionItemID">
+                          <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
                             <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TransactionID" />
                           </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
@@ -656,11 +653,21 @@
                               </If>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="498.85714285714283,115.42857142857143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_System1_URL">[System1_URL]</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_System1_Credential">[System1_Credentials]</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="in_SHA1_URL">[SHA1_URL]</InArgument>
-                                  <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_ExtractDataTable">[dt_TransactionData]</OutArgument>
+                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                    <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_System1_URL">
+                                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="System1_URL" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_System1_Credential">
+                                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="System1_Credentials" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_SHA1_URL">
+                                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SHA1_URL" />
+                                  </InArgument>
+                                  <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_TransactionData">
+                                    <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_TransactionData" />
+                                  </OutArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                               <Assign sap:VirtualizedContainerService.HintSize="498.85714285714283,85.14285714285714" sap2010:WorkflowViewState.IdRef="Assign_29">
