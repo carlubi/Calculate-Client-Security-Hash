@@ -16,7 +16,6 @@
         "Password&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "out_ExtractDataTable",
         "in_System1_URL",
         "in_System1_Credential"
       ],
@@ -108,7 +107,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "out_ExtractDataTable",
+        "out_TransactionData",
         "in_System1_URL",
         "in_System1_Credential",
         "in_SHA1_URL",
@@ -128,11 +127,10 @@
         "HashFormula&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_TransactionItemID",
+        "in_WIID",
         "in_System1_URL",
         "in_HashFormula",
         "in_SHA1_URL",
-        "in_TransactionItemField2",
         "in_TransactionItem",
         "in_Config"
       ],
@@ -162,7 +160,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_TransactionID",
+        "in_WIID",
         "in_System1_URL"
       ],
       "ConstantsSectionElementsOrder": [],
@@ -179,11 +177,9 @@
     {
       "Path": "System1/System1_ExtractWIsDataTable.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "ExtractDataTable&Sequence_5"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "out_ExtractDataTable"
+        "out_TransactionData"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -195,7 +191,6 @@
         "ClientInformation&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_System1_URL",
         "out_ClientName",
         "out_ClientCountry",
         "out_ClientID"
