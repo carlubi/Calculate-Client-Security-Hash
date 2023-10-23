@@ -116,7 +116,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Dashboard" sap:VirtualizedContainerService.HintSize="484.57142857142856,530.2857142857143" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="17d1ac2e280dfa755324a112a1b6d080" Selector="&lt;html app='chrome.exe' title='*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Dashboard" sap:VirtualizedContainerService.HintSize="484.57142857142856,530.2857142857143" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="0e9d9c62632941485ea9f558927cb67b" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

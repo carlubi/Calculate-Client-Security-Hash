@@ -110,7 +110,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Chrome Hash" sap:VirtualizedContainerService.HintSize="484.57142857142856,708" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="9fceaa572017e1b2db050c28de38a221" Selector="&lt;html app='chrome.exe' title='SHA-1 Hash Generator Online Tool' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge Hash" sap:VirtualizedContainerService.HintSize="484.57142857142856,708" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="055d7860ae9ec840803559c9048dbf99" Selector="&lt;html app='msedge.exe' title='SHA-1 Hash Generator Online Tool' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

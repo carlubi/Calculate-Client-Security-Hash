@@ -26,11 +26,10 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ACMELink&StateMachine_1",
         "WList&StateMachine_1",
+        "ACMELink&StateMachine_1",
         "ShouldStop&StateMachine_1",
         "FilePath&StateMachine_1",
-        "WIID&StateMachine_1",
         "System1_URL&StateMachine_1",
         "ClientID&StateMachine_1",
         "ClientCountry&StateMachine_1",
@@ -65,7 +64,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_WList",
+        "in_dtTransactionData",
         "in_TransactionData",
         "in_TransactionNumber",
         "in_Config",
@@ -177,7 +176,9 @@
     {
       "Path": "System1/System1_ExtractWIsDataTable.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [
         "out_TransactionData"
       ],

@@ -109,7 +109,7 @@
       </ui:WaitUiElementVanish.Target>
     </ui:WaitUiElementVanish>
     <Delay DisplayName="Delay 4s" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="484.57142857142856,93.14285714285714" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Chrome " sap:VirtualizedContainerService.HintSize="484.57142857142856,364" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="b6aa90afe0d0d83e8dee55498590f7d9" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Dashboard' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge" sap:VirtualizedContainerService.HintSize="484.57142857142856,364" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="45dded69017ce3ec717430a56f162d17" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
