@@ -1,8 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="System1_UpdateWorkItem" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_UpdateWorkItem" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Status" Type="InArgument(x:String)" />
     <x:Property Name="in_Comment" Type="InArgument(x:String)" />
+    <x:Property Name="in_WIID" Type="InArgument(x:String)" />
   </x:Members>
+  <this:System1_UpdateWorkItem.in_WIID>
+    <InArgument x:TypeArguments="x:String" />
+  </this:System1_UpdateWorkItem.in_WIID>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
@@ -114,7 +118,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Work Item - Client information" sap:VirtualizedContainerService.HintSize="484.57142857142856,364" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="e026a6effcf94f95fb48870333cdeada" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Work Item - Client information" sap:VirtualizedContainerService.HintSize="484.57142857142856,404" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="e026a6effcf94f95fb48870333cdeada" Selector="&lt;html app='msedge.exe' title='ACME System 1 - *' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -149,7 +153,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Edge Browser" sap:VirtualizedContainerService.HintSize="484.57142857142856,1056" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="4b8ba6e8-8710-4115-a5c7-9824f28932b0" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Edge Browser" sap:VirtualizedContainerService.HintSize="484.57142857142856,1016" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="4b8ba6e8-8710-4115-a5c7-9824f28932b0" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -162,7 +166,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Write Comment 'hash'" sap:VirtualizedContainerService.HintSize="388.57142857142856,157.14285714285714" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_Comment]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Write Comment 'hash'" EmptyField="True" sap:VirtualizedContainerService.HintSize="388.57142857142856,157.14285714285714" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_Comment]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9cabc38-97fb-4925-a678-495481dc02f9" InformativeScreenshot="ee91100395ae2302cd2967583d37c264" Selector="&lt;webctrl id='newComment' tag='TEXTAREA' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -186,11 +190,6 @@
                 </ui:Target>
               </ui:SelectItem.Target>
             </ui:SelectItem>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="388.57142857142856,159.42857142857142" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b8ba6e8-8710-4115-a5c7-9824f28932b0" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/89872064" CvElementArea="753, 228, 120, 64" CvTextArea="795, 248, 33, 21" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="753, 230, 120, 63" DesignTimeScaleFactor="1.75" ElementType="Button" FriendlyName="'OK'" Guid="5abc787d-6a03-404d-8559-b91268f05b6a" InformativeScreenshot="5f578383431f45335e8d1ab04e6dfc13.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
-              </uix:NClick.Target>
-            </uix:NClick>
             <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click to Update work item" sap:VirtualizedContainerService.HintSize="388.57142857142856,106.85714285714286" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
@@ -213,11 +212,16 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="388.57142857142856,159.42857142857142" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b8ba6e8-8710-4115-a5c7-9824f28932b0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/update/89872064" CvElementArea="753, 228, 120, 64" CvTextArea="795, 248, 33, 21" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="753, 230, 120, 63" DesignTimeScaleFactor="1.75" ElementType="Button" FriendlyName="'OK'" Guid="5abc787d-6a03-404d-8559-b91268f05b6a" InformativeScreenshot="5f578383431f45335e8d1ab04e6dfc13.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 812, 1169" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYAABnWARjRyu0AAAB6SURBVDhPY2CAgnggeA8E/7GAfiCAqcNJ3wcCBSBAVwAybwEQzAcCvIaAFGJTABMnaAghA0CG4zUEnwECQABzHU5DcBnQAATYAhbDu7gMwBcuKHKjBjAwDIMwAOVEbJkJPR2A1IAyHkb6SAACkAS2VIcsBrIIpBZmAAB0Tttp0IMHoQAAAABJRU5ErkJggg==" InformativeScreenshot="a8f4e936eeb670b0414e46343818108a.jpg" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='ACME System 1' /&gt;" Title="ACME System 1" />
+        <uix:TargetApp Area="0, 0, 812, 1169" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAGdYAABnWARjRyu0AAAB6SURBVDhPY2CAgnggeA8E/7GAfiCAqcNJ3wcCBSBAVwAybwEQzAcCvIaAFGJTABMnaAghA0CG4zUEnwECQABzHU5DcBnQAATYAhbDu7gMwBcuKHKjBjAwDIMwAOVEbJkJPR2A1IAyHkb6SAACkAS2VIcsBrIIpBZmAAB0Tttp0IMHoQAAAABJRU5ErkJggg==" InformativeScreenshot="a8f4e936eeb670b0414e46343818108a.jpg" Selector="&lt;html app='msedge.exe' htmlwindowname='WI-Update' title='*' /&gt;" Title="ACME System 1" Url="[&quot;https://acme-test.uipath.com/work-items/update/&quot; + in_WIID]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

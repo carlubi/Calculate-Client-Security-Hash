@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>942.8571428571429,958.8571428571429</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>942.8571428571429,1162.2857142857142</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_ExtractWIsDataTable_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -104,9 +104,11 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_ExtractWIsDataTable" sap:VirtualizedContainerService.HintSize="546.2857142857143,893.7142857142857" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_ExtractWIsDataTable" sap:VirtualizedContainerService.HintSize="546.2857142857143,1097.142857142857" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
     </Sequence.Variables>
@@ -116,13 +118,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Delay DisplayName="Delay 10s" Duration="00:00:10" sap:VirtualizedContainerService.HintSize="484.57142857142856,93.14285714285714" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Work Items to Extract Data" sap:VirtualizedContainerService.HintSize="484.57142857142856,650.2857142857143" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="a675b5ef-0fc4-4057-8378-b43d3381797b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Work Items to Extract Data" sap:VirtualizedContainerService.HintSize="484.57142857142856,853.7142857142857" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="a675b5ef-0fc4-4057-8378-b43d3381797b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450.2857142857143,430.2857142857143" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450.2857142857143,633.7142857142857" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -136,7 +138,34 @@
                 <uix:TargetAnchorable DesignTimeRectangle="530, 723, 1748, 735" DesignTimeScaleFactor="1.75" FriendlyName="'Actions WIID'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="fbaea3be-6ddf-492d-a15e-73ce13edcd08" InformativeScreenshot="1dd3a841177515e9fd220619c6335051.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
               </uix:NExtractData.Target>
             </uix:NExtractData>
-            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[out_TransactionData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388.57142857142856,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Work Items" WorkbookPath="Data\Output\ExtractedData.xlsx" />
+            <ui:FilterDataTable DataTable="[out_TransactionData]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388.57142857142856,165.71428571428572" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_TransactionData]" SelectColumnsMode="Remove">
+              <ui:FilterDataTable.Filters>
+                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["Type"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">["WI5"]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                    <ui:FilterOperationArgument.Column>
+                      <InArgument x:TypeArguments="x:String">["Status"]</InArgument>
+                    </ui:FilterOperationArgument.Column>
+                    <ui:FilterOperationArgument.Operand>
+                      <InArgument x:TypeArguments="x:String">["Open"]</InArgument>
+                    </ui:FilterOperationArgument.Operand>
+                  </ui:FilterOperationArgument>
+                </scg:List>
+              </ui:FilterDataTable.Filters>
+              <ui:FilterDataTable.SelectColumns>
+                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                  <x:Null />
+                </scg:List>
+              </ui:FilterDataTable.SelectColumns>
+            </ui:FilterDataTable>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[out_TransactionData]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388.57142857142856,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Work Items" WorkbookPath="Data\Output\ExtractedData.xlsx" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

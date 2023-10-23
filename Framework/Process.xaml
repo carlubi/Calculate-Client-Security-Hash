@@ -22,7 +22,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>486.2857142857142,1165.7142857142858</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>944,1165.7142857142858</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -103,6 +103,7 @@
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="496,1100.5714285714287" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -149,8 +150,15 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Update Work Item" sap:VirtualizedContainerService.HintSize="434.2857142857143,115.42857142857143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="System1\System1_UpdateWorkItem.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Status">Completed</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Comment">[HashResult]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Status">
+          <Literal x:TypeArguments="x:String">Completed</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Comment">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="HashResult" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_WIID">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_WIID" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

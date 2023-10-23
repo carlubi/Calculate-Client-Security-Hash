@@ -26,7 +26,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "WList&StateMachine_1",
+        "TransactionField1&StateMachine_1",
         "ACMELink&StateMachine_1",
         "ShouldStop&StateMachine_1",
         "FilePath&StateMachine_1",
@@ -64,8 +64,8 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "in_dtTransactionData",
-        "in_TransactionData",
+        "out_TransactionField1",
+        "io_dt_TransactionData",
         "in_TransactionNumber",
         "in_Config",
         "out_TransactionItem",
@@ -119,19 +119,19 @@
       "Path": "Framework/Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "ClientID&Sequence_1",
-        "ClientName&Sequence_1",
-        "ClientCountry&Sequence_1",
+        "HashFormula&Sequence_1",
         "HashResult&Sequence_1",
-        "HashFormula&Sequence_1"
+        "ClientCountry&Sequence_1",
+        "ClientName&Sequence_1",
+        "ClientID&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_WIID",
+        "in_TransactionItem",
+        "in_Config",
         "in_System1_URL",
         "in_HashFormula",
         "in_SHA1_URL",
-        "in_TransactionItem",
-        "in_Config"
+        "in_WIID"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
@@ -204,6 +204,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "in_WIID",
         "in_Comment",
         "in_Status"
       ],
