@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>944,766.2857142857143</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,789</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_NavigateTo_Dashboard_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -83,25 +83,25 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_NavigateTo_Dashboard" sap:VirtualizedContainerService.HintSize="546.2857142857143,454.85714285714283" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_NavigateTo_Dashboard" sap:VirtualizedContainerService.HintSize="546,455" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge Work items" sap:VirtualizedContainerService.HintSize="484.57142857142856,344.57142857142856" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="6aa5898dd3e29ba432025aaecb21413f" Selector="[string.Format(&quot;&lt;html app='msedge.exe' url='{0}*' /&gt;&quot;, in_System1_URL)]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Edge Work items" sap:VirtualizedContainerService.HintSize="484,344" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="49e3e9a59519ad17be01fa76a34006ef" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450.2857142857143,197.71428571428572" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:NavigateTo Browser="{x:Null}" DisplayName="Go to WorkItems" sap:VirtualizedContainerService.HintSize="388.57142857142856,87.42857142857143" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_System1_URL]" />
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Go to WorkItems" sap:VirtualizedContainerService.HintSize="388,86" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[in_System1_URL]" />
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>

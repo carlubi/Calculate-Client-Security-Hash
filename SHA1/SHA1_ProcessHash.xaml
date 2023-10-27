@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>944,883.4285714285714</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>979,884</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SHA1_ProcessHash_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -104,26 +104,26 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SHA1_ProcessHash" sap:VirtualizedContainerService.HintSize="546.2857142857143,818.2857142857143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SHA1_ProcessHash" sap:VirtualizedContainerService.HintSize="546,819" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge Hash" sap:VirtualizedContainerService.HintSize="484.57142857142856,708" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="055d7860ae9ec840803559c9048dbf99" Selector="&lt;html app='msedge.exe' title='SHA-1 Hash Generator Online Tool' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Edge Hash" sap:VirtualizedContainerService.HintSize="484,708" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="eac5c91fea93af32efad196aecf294c9" Selector="&lt;html app='chrome.exe' title='SHA-1 Hash Generator Online Tool' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450.2857142857143,561.1428571428571" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,561" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Write Hash Formula (Client information)" sap:VirtualizedContainerService.HintSize="388.57142857142856,157.14285714285714" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_HashFormula]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Write Hash Formula (Client information)" sap:VirtualizedContainerService.HintSize="388,156" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_HashFormula]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dd8a2622-27ff-44f0-ad45-a5894b1d1f17" InformativeScreenshot="7ece7ce3d7d41c182858e0419ab2abd8" Selector="&lt;webctrl id='inputTextArea' tag='TEXTAREA' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -135,7 +135,7 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Save Hash in Variable" sap:VirtualizedContainerService.HintSize="388.57142857142856,106.85714285714286" sap2010:WorkflowViewState.IdRef="GetValue_1">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Save Hash in Variable" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
               <ui:GetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2ca40848-34fe-4d71-a7b3-408ed6f58957" InformativeScreenshot="ccf3c3a0158f2f93cf396332a00332f2" Selector="&lt;webctrl id='outputTextArea' tag='TEXTAREA' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -150,7 +150,7 @@
                 <OutArgument x:TypeArguments="x:String">[out_HashResult]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click for delete" sap:VirtualizedContainerService.HintSize="388.57142857142856,106.85714285714286" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click for delete" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>

@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>944,914.8571428571429</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>582,910</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_ExtractClientInformation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,19 +99,19 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_ExtractClientInformation" sap:VirtualizedContainerService.HintSize="592,849.7142857142857" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_ExtractClientInformation" sap:VirtualizedContainerService.HintSize="592,845" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Edge Browser" sap:VirtualizedContainerService.HintSize="530.2857142857143,739.4285714285714" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="e026a6effcf94f95fb48870333cdeada" Selector="&lt;html app='msedge.exe' title='ACME System 1 - *' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Edge Browser" sap:VirtualizedContainerService.HintSize="530,734" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="1728072111a72da83e93a21bc68f66de" Selector="&lt;html app='chrome.exe' title='ACME System 1 - *' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,592.5714285714286" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,587" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="ClientInformation" />
             </Sequence.Variables>
@@ -121,7 +121,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extracting Information" sap:VirtualizedContainerService.HintSize="434.2857142857143,106.85714285714286" sap2010:WorkflowViewState.IdRef="GetValue_1">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extracting Information" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
               <ui:GetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cf3c8b5f-4e9a-46d0-897e-0daf32da0b04" InformativeScreenshot="b208df61c23aab62c4437827dcccbef2" Selector="&lt;webctrl tag='P' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
@@ -133,7 +133,7 @@
                 <OutArgument x:TypeArguments="x:String">[ClientInformation]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <Assign DisplayName="Assign 'ClientID'" sap:VirtualizedContainerService.HintSize="434.2857142857143,85.14285714285714" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Assign 'ClientID'" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_ClientID]</OutArgument>
               </Assign.To>
@@ -141,7 +141,7 @@
                 <InArgument x:TypeArguments="x:String">[ClientInformation.Substring(ClientInformation.IndexOf("Client ID: ") + "Client ID: ".Length).Split(Environment.NewLine.ToCharArray)(0)]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign 'ClientName'" sap:VirtualizedContainerService.HintSize="434.2857142857143,85.14285714285714" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Assign 'ClientName'" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_ClientName]</OutArgument>
               </Assign.To>
@@ -149,7 +149,7 @@
                 <InArgument x:TypeArguments="x:String">[ClientInformation.Substring(ClientInformation.IndexOf("Client Name: ") + "Client Name: ".Length).Split(Environment.NewLine.ToCharArray)(0)]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="Assign 'ClientCountry'" sap:VirtualizedContainerService.HintSize="434.2857142857143,85.14285714285714" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign DisplayName="Assign 'ClientCountry'" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[out_ClientCountry]</OutArgument>
               </Assign.To>
